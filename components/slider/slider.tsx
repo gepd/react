@@ -12,9 +12,12 @@ import useDrag, { DraggingEvent } from '../utils/use-drag'
 import useCurrentState from '../utils/use-current-state'
 import SliderDot from './slider-dot'
 import SliderMark from './slider-mark'
+import { getColors } from './styles'
+import { NormalTypes } from 'components/utils/prop-types'
 
 interface Props {
   value?: number
+  status?: NormalTypes
   initialValue?: number
   step?: number
   max?: number
@@ -26,6 +29,7 @@ interface Props {
 }
 
 const defaultProps = {
+  status: 'default' as NormalTypes,
   initialValue: 0,
   step: 1,
   min: 0,
@@ -64,6 +68,7 @@ const getValue = (
 
 const Slider: React.FC<React.PropsWithChildren<SliderProps>> = ({
   disabled,
+  status,
   step,
   max,
   min,
@@ -103,6 +108,8 @@ const Slider: React.FC<React.PropsWithChildren<SliderProps>> = ({
     },
     [max, min, step, sideWidthRef],
   )
+
+  const { bg } = useMemo(() => getColors(theme.palette, status), [theme.palette, status])
 
   const dragHandler = (event: DraggingEvent) => {
     if (disabled) return
@@ -159,9 +166,7 @@ const Slider: React.FC<React.PropsWithChildren<SliderProps>> = ({
           width: 100%;
           height: 0.5rem;
           border-radius: 50px;
-          background-color: ${disabled
-            ? theme.palette.accents_2
-            : theme.palette.accents_8};
+          background-color: ${disabled ? theme.palette.accents_2 : bg};
           position: relative;
           cursor: ${disabled ? 'not-allow' : 'pointer'};
         }
