@@ -32,29 +32,27 @@ Display a dropdown list of items.
   scope={{ Select, Spacer }}
   code={`
 () => {
-  return (
-    <>
-      <Select placeholder="default" status="default">
-        <Select.Option value="1">Option 1</Select.Option>
-        <Select.Option value="2">Option 2</Select.Option>
-      </Select>
-      <Spacer y={.5} />
-      <Select placeholder="success" status="success">
-        <Select.Option value="1">Option 1</Select.Option>
-        <Select.Option value="2">Option 2</Select.Option>
-      </Select>
-      <Spacer y={.5} />
-      <Select placeholder="warning" status="warning">
-        <Select.Option value="1">Option 1</Select.Option>
-        <Select.Option value="2">Option 2</Select.Option>
-      </Select>
-      <Spacer y={.5} />
-      <Select placeholder="error" status="error">
-        <Select.Option value="1">Option 1</Select.Option>
-        <Select.Option value="2">Option 2</Select.Option>
-      </Select>
-    </>
-  )
+  <>
+    <Select placeholder="default" status="default">
+      <Select.Option value="1">Option 1</Select.Option>
+      <Select.Option value="2">Option 2</Select.Option>
+    </Select>
+    <Spacer y={.5} />
+    <Select placeholder="success" status="success">
+      <Select.Option value="1">Option 1</Select.Option>
+      <Select.Option value="2">Option 2</Select.Option>
+    </Select>
+    <Spacer y={.5} />
+    <Select placeholder="warning" status="warning">
+      <Select.Option value="1">Option 1</Select.Option>
+      <Select.Option value="2">Option 2</Select.Option>
+    </Select>
+    <Spacer y={.5} />
+    <Select placeholder="error" status="error">
+      <Select.Option value="1">Option 1</Select.Option>
+      <Select.Option value="2">Option 2</Select.Option>
+    </Select>
+  </>
 }
 `}
 />
