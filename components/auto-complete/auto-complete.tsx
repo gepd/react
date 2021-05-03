@@ -22,7 +22,7 @@ export type AutoCompleteOptions = Array<
 interface Props {
   options: AutoCompleteOptions
   size?: NormalSizes
-  status?: NormalTypes
+  type?: NormalTypes
   initialValue?: string
   value?: string
   width?: string
@@ -44,6 +44,7 @@ const defaultProps = {
   disabled: false,
   clearable: false,
   size: 'medium' as NormalSizes,
+  type: 'default' as NormalTypes,
   disableMatchWidth: false,
   disableFreeSolo: false,
   className: '',
@@ -80,7 +81,7 @@ const AutoComplete: React.FC<React.PropsWithChildren<AutoCompleteProps>> = ({
   searching,
   children,
   size,
-  status,
+  type,
   value,
   width,
   clearable,
@@ -192,7 +193,7 @@ const AutoComplete: React.FC<React.PropsWithChildren<AutoCompleteProps>> = ({
         <Input
           ref={inputRef}
           size={size}
-          status={status}
+          type={type}
           onChange={onInputChange}
           onFocus={() => toggleFocusHandler(true)}
           onBlur={() => toggleFocusHandler(false)}

@@ -17,7 +17,7 @@ import { NormalTypes } from 'components/utils/prop-types'
 
 interface Props {
   value?: number
-  status?: NormalTypes
+  type?: NormalTypes
   initialValue?: number
   step?: number
   max?: number
@@ -29,7 +29,7 @@ interface Props {
 }
 
 const defaultProps = {
-  status: 'default' as NormalTypes,
+  type: 'default' as NormalTypes,
   initialValue: 0,
   step: 1,
   min: 0,
@@ -68,7 +68,7 @@ const getValue = (
 
 const Slider: React.FC<React.PropsWithChildren<SliderProps>> = ({
   disabled,
-  status,
+  type,
   step,
   max,
   min,
@@ -109,7 +109,7 @@ const Slider: React.FC<React.PropsWithChildren<SliderProps>> = ({
     [max, min, step, sideWidthRef],
   )
 
-  const { bg } = useMemo(() => getColors(theme.palette, status), [theme.palette, status])
+  const { bg } = useMemo(() => getColors(theme.palette, type), [theme.palette, type])
 
   const dragHandler = (event: DraggingEvent) => {
     if (disabled) return
