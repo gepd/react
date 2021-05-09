@@ -8,7 +8,7 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import { NormalSizes } from '../utils/prop-types'
+import { NormalSizes, NormalTypes } from '../utils/prop-types'
 import useTheme from '../use-theme'
 import useClickAway from '../utils/use-click-away'
 import useCurrentState from '../utils/use-current-state'
@@ -19,12 +19,13 @@ import SelectDropdown from './select-dropdown'
 import SelectMultipleValue from './select-multiple-value'
 import Grid from '../grid'
 import { SelectContext, SelectConfig } from './select-context'
-import { getSizes } from './styles'
+import { getColors, getSizes } from './styles'
 import Ellipsis from '../shared/ellipsis'
 
 interface Props {
   disabled?: boolean
   size?: NormalSizes
+  type?: NormalTypes
   value?: string | string[]
   initialValue?: string | string[]
   placeholder?: React.ReactNode | string
@@ -44,6 +45,7 @@ interface Props {
 const defaultProps = {
   disabled: false,
   size: 'medium' as NormalSizes,
+  type: 'default' as NormalTypes,
   icon: SelectIcon as React.ComponentType,
   pure: false,
   multiple: false,
@@ -61,6 +63,7 @@ const Select = React.forwardRef<HTMLDivElement, React.PropsWithChildren<SelectPr
     {
       children,
       size,
+      type,
       disabled,
       initialValue: init,
       value: customValue,
@@ -95,6 +98,12 @@ const Select = React.forwardRef<HTMLDivElement, React.PropsWithChildren<SelectPr
       return value.length === 0
     }, [value])
     const sizes = useMemo(() => getSizes(theme, size), [theme, size])
+
+    const { border, placeholderColor } = useMemo(() => getColors(theme.palette, type), [
+      theme.palette,
+      type,
+    ])
+
     useImperativeHandle(ref, () => divRef.current)
 
     const updateVisible = (next: boolean) => setVisible(next)
@@ -197,7 +206,7 @@ const Select = React.forwardRef<HTMLDivElement, React.PropsWithChildren<SelectPr
               overflow: hidden;
               transition: border 0.2s ease 0s, color 0.2s ease-out 0s,
                 box-shadow 0.2s ease 0s;
-              border: 1px solid ${theme.palette.border};
+              border: 1px solid ${border};
               border-radius: ${theme.layout.radius};
               padding: 0 ${theme.layout.gapQuarter} 0 ${theme.layout.gapHalf};
               height: ${sizes.height};
@@ -206,27 +215,18 @@ const Select = React.forwardRef<HTMLDivElement, React.PropsWithChildren<SelectPr
                 ? theme.palette.accents_1
                 : theme.palette.background};
             }
-
-            .select:focus {
-              border: 1px solid ${theme.palette.accents_8};
-              border-radius: ${theme.layout.radius};
-            }
-
             .multiple {
               height: auto;
               min-height: ${sizes.height};
               padding: ${theme.layout.gapQuarter} calc(${sizes.fontSize} * 2)
                 ${theme.layout.gapQuarter} ${theme.layout.gapHalf};
             }
-
             .select:hover {
               border-color: ${disabled ? theme.palette.border : theme.palette.foreground};
             }
-
             .select:hover .icon {
               color: ${disabled ? theme.palette.accents_5 : theme.palette.foreground};
             }
-
             .value {
               display: inline-flex;
               flex: 1;
@@ -239,7 +239,6 @@ const Select = React.forwardRef<HTMLDivElement, React.PropsWithChildren<SelectPr
               color: ${disabled ? theme.palette.accents_4 : theme.palette.foreground};
               width: calc(100% - 1.25rem);
             }
-
             .value > :global(div),
             .value > :global(div:hover) {
               border-radius: 0;
@@ -248,11 +247,9 @@ const Select = React.forwardRef<HTMLDivElement, React.PropsWithChildren<SelectPr
               margin: 0;
               color: inherit;
             }
-
             .placeholder {
-              color: ${theme.palette.accents_3};
+              color: ${placeholderColor};
             }
-
             .icon {
               position: absolute;
               right: ${theme.layout.gapQuarter};

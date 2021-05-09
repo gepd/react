@@ -13,7 +13,8 @@ import RadioGroup, { getRadioSize } from './radio-group'
 import RadioDescription from './radio-description'
 import { pickChild } from '../utils/collections'
 import useWarning from '../utils/use-warning'
-import { NormalSizes } from '../utils/prop-types'
+import { NormalSizes, NormalTypes } from '../utils/prop-types'
+import { getColors } from './styles'
 
 interface RadioEventTarget {
   checked: boolean
@@ -30,6 +31,7 @@ interface Props {
   checked?: boolean
   value?: string | number
   size?: NormalSizes
+  type?: NormalTypes
   className?: string
   disabled?: boolean
   onChange?: (e: RadioEvent) => void
@@ -37,6 +39,7 @@ interface Props {
 
 const defaultProps = {
   size: 'medium' as NormalSizes,
+  type: 'default' as NormalTypes,
   disabled: false,
   className: '',
 }
@@ -46,16 +49,7 @@ export type RadioProps = Props & typeof defaultProps & NativeAttrs
 
 const Radio = React.forwardRef<HTMLInputElement, React.PropsWithChildren<RadioProps>>(
   (
-    {
-      className,
-      checked,
-      onChange,
-      disabled,
-      size,
-      value: radioValue,
-      children,
-      ...props
-    },
+    { className, checked, onChange, disabled, size, type, value, children, ...props },
     ref: React.Ref<HTMLInputElement | null>,
   ) => {
     const theme = useTheme()
@@ -69,15 +63,20 @@ const Radio = React.forwardRef<HTMLInputElement, React.PropsWithChildren<RadioPr
       if (checked !== undefined) {
         useWarning('Remove props "checked" if in the Radio.Group.', 'Radio')
       }
-      if (radioValue === undefined) {
+      if (value === undefined) {
         useWarning('Props "value" must be deinfed if in the Radio.Group.', 'Radio')
       }
       useEffect(() => {
-        setSelfChecked(groupValue === radioValue)
-      }, [groupValue, radioValue])
+        setSelfChecked(groupValue === value)
+      }, [groupValue, value])
     }
 
     const fontSize = useMemo(() => getRadioSize(size), [size])
+    const { label, border, bg } = useMemo(() => getColors(theme.palette, type), [
+      theme.palette,
+      type,
+    ])
+
     const isDisabled = useMemo(() => disabled || disabledAll, [disabled, disabledAll])
     const changeHandler = (event: React.ChangeEvent) => {
       if (isDisabled) return
@@ -91,11 +90,10 @@ const Radio = React.forwardRef<HTMLInputElement, React.PropsWithChildren<RadioPr
       }
       setSelfChecked(!selfChecked)
       if (inGroup) {
-        updateState && updateState(radioValue as string | number)
+        updateState && updateState(value as string | number)
       }
       onChange && onChange(selfEvent)
     }
-
     useEffect(() => {
       if (checked === undefined) return
       setSelfChecked(Boolean(checked))
@@ -106,7 +104,7 @@ const Radio = React.forwardRef<HTMLInputElement, React.PropsWithChildren<RadioPr
         <label>
           <input
             type="radio"
-            value={radioValue}
+            value={value}
             checked={selfChecked}
             onChange={changeHandler}
             ref={inputRef}
@@ -143,7 +141,7 @@ const Radio = React.forwardRef<HTMLInputElement, React.PropsWithChildren<RadioPr
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            color: ${isDisabled ? theme.palette.accents_4 : theme.palette.foreground};
+            color: ${isDisabled ? theme.palette.accents_4 : label};
             cursor: ${isDisabled ? 'not-allowed' : 'pointer'};
           }
 
@@ -159,7 +157,7 @@ const Radio = React.forwardRef<HTMLInputElement, React.PropsWithChildren<RadioPr
             height: var(--radio-size);
             width: var(--radio-size);
             border-radius: 50%;
-            border: 1px solid ${theme.palette.border};
+            border: 1px solid ${border};
             transition: all 0.2s ease 0s;
             position: relative;
             display: inline-block;
@@ -176,9 +174,7 @@ const Radio = React.forwardRef<HTMLInputElement, React.PropsWithChildren<RadioPr
             height: var(--radio-size);
             width: var(--radio-size);
             border-radius: 50%;
-            background-color: ${isDisabled
-              ? theme.palette.accents_4
-              : theme.palette.foreground};
+            background-color: ${isDisabled ? theme.palette.accents_4 : bg};
           }
 
           .point.active:before {

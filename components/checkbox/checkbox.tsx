@@ -12,7 +12,9 @@ import { useCheckbox } from './checkbox-context'
 import CheckboxGroup, { getCheckboxSize } from './checkbox-group'
 import CheckboxIcon from './checkbox.icon'
 import useWarning from '../utils/use-warning'
-import { NormalSizes } from '../utils/prop-types'
+import { NormalSizes, NormalTypes } from '../utils/prop-types'
+import { getColors } from './styles'
+import useTheme from '../use-theme'
 
 interface CheckboxEventTarget {
   checked: boolean
@@ -28,6 +30,7 @@ export interface CheckboxEvent {
 interface Props {
   checked?: boolean
   disabled?: boolean
+  type?: NormalTypes
   initialChecked?: boolean
   onChange?: (e: CheckboxEvent) => void
   size?: NormalSizes
@@ -37,6 +40,7 @@ interface Props {
 
 const defaultProps = {
   disabled: false,
+  type: 'default' as NormalTypes,
   initialChecked: false,
   size: 'small' as NormalSizes,
   className: '',
@@ -59,11 +63,13 @@ const Checkbox = React.forwardRef<
       className,
       children,
       size,
+      type,
       value,
       ...props
     },
     ref: React.Ref<HTMLInputElement | null>,
   ) => {
+    const theme = useTheme()
     const [selfChecked, setSelfChecked] = useState<boolean>(initialChecked)
     const { updateState, inGroup, disabledAll, values } = useCheckbox()
     const isDisabled = inGroup ? disabledAll || disabled : disabled
@@ -106,6 +112,11 @@ const Checkbox = React.forwardRef<
       [updateState, onChange, isDisabled, selfChecked],
     )
 
+    const { fill, bg } = useMemo(() => getColors(theme.palette, type), [
+      theme.palette,
+      type,
+    ])
+
     useEffect(() => {
       if (checked === undefined) return
       setSelfChecked(checked)
@@ -113,7 +124,7 @@ const Checkbox = React.forwardRef<
 
     return (
       <label className={`${className}`}>
-        <CheckboxIcon disabled={isDisabled} checked={selfChecked} />
+        <CheckboxIcon fill={fill} bg={bg} disabled={isDisabled} checked={selfChecked} />
         <input
           type="checkbox"
           disabled={isDisabled}
