@@ -20,11 +20,23 @@ describe('Modal', () => {
         <Modal.Content>
           <p>Some content contained within the modal.</p>
         </Modal.Content>
-        <Modal.Action passive>Cancel</Modal.Action>
+        <Modal.Action>Cancel</Modal.Action>
         <Modal.Action>Submit</Modal.Action>
       </Modal>,
     )
     expect(wrapper.html()).toMatchSnapshot()
+    expect(() => wrapper.unmount()).not.toThrow()
+  })
+
+  it('should support all types', () => {
+    const wrapper = mount(
+      <div>
+        <Modal.Action type="secondary" />
+        <Modal.Action type="success" />
+        <Modal.Action type="warning" />
+        <Modal.Action type="error" />
+      </div>,
+    )
     expect(() => wrapper.unmount()).not.toThrow()
   })
 
@@ -82,9 +94,7 @@ describe('Modal', () => {
     const wrapper = mount(
       <Modal open={true}>
         <Modal.Title>Modal</Modal.Title>
-        <Modal.Action passive onClick={actions1}>
-          Submit
-        </Modal.Action>
+        <Modal.Action onClick={actions1}>Submit</Modal.Action>
         <Modal.Action disabled onClick={actions2}>
           Submit
         </Modal.Action>
@@ -102,9 +112,7 @@ describe('Modal', () => {
     const wrapper = mount(
       <Modal open={true} onClose={closeHandler}>
         <Modal.Title>Modal</Modal.Title>
-        <Modal.Action passive onClick={e => e.close()}>
-          Close
-        </Modal.Action>
+        <Modal.Action onClick={e => e.close()}>Close</Modal.Action>
       </Modal>,
     )
     wrapper.find('button').at(0).simulate('click', nativeEvent)
