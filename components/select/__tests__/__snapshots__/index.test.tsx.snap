@@ -35,26 +35,18 @@ exports[`Select should render correctly 1`] = `
               min-width: 10rem;
               background-color: #fff;
             }
-            .select:focus {
-              border: 1px solid #111;
-              border-radius: 5px;
-            }
-
             .multiple {
               height: auto;
               min-height: calc(1.688 * 16pt);
               padding: 4pt calc(.875rem * 2)
                 4pt 8pt;
             }
-
             .select:hover {
               border-color: #000;
             }
-
             .select:hover .icon {
               color: #000;
             }
-
             .value {
               display: inline-flex;
               flex: 1;
@@ -67,7 +59,6 @@ exports[`Select should render correctly 1`] = `
               color: #000;
               width: calc(100% - 1.25rem);
             }
-
             .value > :global(div),
             .value > :global(div:hover) {
               border-radius: 0;
@@ -76,11 +67,9 @@ exports[`Select should render correctly 1`] = `
               margin: 0;
               color: inherit;
             }
-
             .placeholder {
               color: #999;
             }
-
             .icon {
               position: absolute;
               right: 4pt;
@@ -128,26 +117,18 @@ exports[`Select should render correctly 1`] = `
               min-width: 6.5rem;
               background-color: #fff;
             }
-            .select:focus {
-              border: 1px solid #111;
-              border-radius: 5px;
-            }
-
             .multiple {
               height: auto;
               min-height: calc(1 * 16pt);
               padding: 4pt calc(.75rem * 2)
                 4pt 8pt;
             }
-
             .select:hover {
               border-color: #000;
             }
-
             .select:hover .icon {
               color: #000;
             }
-
             .value {
               display: inline-flex;
               flex: 1;
@@ -160,7 +141,6 @@ exports[`Select should render correctly 1`] = `
               color: #000;
               width: calc(100% - 1.25rem);
             }
-
             .value > :global(div),
             .value > :global(div:hover) {
               border-radius: 0;
@@ -169,11 +149,9 @@ exports[`Select should render correctly 1`] = `
               margin: 0;
               color: inherit;
             }
-
             .placeholder {
               color: #999;
             }
-
             .icon {
               position: absolute;
               right: 4pt;
@@ -221,26 +199,18 @@ exports[`Select should render correctly 1`] = `
               min-width: 8rem;
               background-color: #fff;
             }
-            .select:focus {
-              border: 1px solid #111;
-              border-radius: 5px;
-            }
-
             .multiple {
               height: auto;
               min-height: calc(1.344 * 16pt);
               padding: 4pt calc(.75rem * 2)
                 4pt 8pt;
             }
-
             .select:hover {
               border-color: #000;
             }
-
             .select:hover .icon {
               color: #000;
             }
-
             .value {
               display: inline-flex;
               flex: 1;
@@ -253,7 +223,6 @@ exports[`Select should render correctly 1`] = `
               color: #000;
               width: calc(100% - 1.25rem);
             }
-
             .value > :global(div),
             .value > :global(div:hover) {
               border-radius: 0;
@@ -262,11 +231,9 @@ exports[`Select should render correctly 1`] = `
               margin: 0;
               color: inherit;
             }
-
             .placeholder {
               color: #999;
             }
-
             .icon {
               position: absolute;
               right: 4pt;
@@ -314,26 +281,18 @@ exports[`Select should render correctly 1`] = `
               min-width: 12.5rem;
               background-color: #fff;
             }
-            .select:focus {
-              border: 1px solid #111;
-              border-radius: 5px;
-            }
-
             .multiple {
               height: auto;
               min-height: calc(2 * 16pt);
               padding: 4pt calc(1.225rem * 2)
                 4pt 8pt;
             }
-
             .select:hover {
               border-color: #000;
             }
-
             .select:hover .icon {
               color: #000;
             }
-
             .value {
               display: inline-flex;
               flex: 1;
@@ -346,7 +305,6 @@ exports[`Select should render correctly 1`] = `
               color: #000;
               width: calc(100% - 1.25rem);
             }
-
             .value > :global(div),
             .value > :global(div:hover) {
               border-radius: 0;
@@ -355,11 +313,9 @@ exports[`Select should render correctly 1`] = `
               margin: 0;
               color: inherit;
             }
-
             .placeholder {
               color: #999;
             }
-
             .icon {
               position: absolute;
               right: 4pt;
@@ -411,26 +367,18 @@ exports[`Select should work correctly with labels 1`] = `
               min-width: 10rem;
               background-color: #fff;
             }
-            .select:focus {
-              border: 1px solid #111;
-              border-radius: 5px;
-            }
-
             .multiple {
               height: auto;
               min-height: calc(1.688 * 16pt);
               padding: 4pt calc(.875rem * 2)
                 4pt 8pt;
             }
-
             .select:hover {
               border-color: #000;
             }
-
             .select:hover .icon {
               color: #000;
             }
-
             .value {
               display: inline-flex;
               flex: 1;
@@ -443,7 +391,6 @@ exports[`Select should work correctly with labels 1`] = `
               color: #000;
               width: calc(100% - 1.25rem);
             }
-
             .value > :global(div),
             .value > :global(div:hover) {
               border-radius: 0;
@@ -452,11 +399,9 @@ exports[`Select should work correctly with labels 1`] = `
               margin: 0;
               color: inherit;
             }
-
             .placeholder {
               color: #999;
             }
-
             .icon {
               position: absolute;
               right: 4pt;
@@ -554,26 +499,18 @@ initialize {
               min-width: 10rem;
               background-color: #fff;
             }
-            .select:focus {
-              border: 1px solid #111;
-              border-radius: 5px;
-            }
-
             .multiple {
               height: auto;
               min-height: calc(1.688 * 16pt);
               padding: 4pt calc(.875rem * 2)
                 4pt 8pt;
             }
-
             .select:hover {
               border-color: #000;
             }
-
             .select:hover .icon {
               color: #000;
             }
-
             .value {
               display: inline-flex;
               flex: 1;
@@ -586,7 +523,6 @@ initialize {
               color: #000;
               width: calc(100% - 1.25rem);
             }
-
             .value &gt; :global(div),
             .value &gt; :global(div:hover) {
               border-radius: 0;
@@ -595,11 +531,9 @@ initialize {
               margin: 0;
               color: inherit;
             }
-
             .placeholder {
               color: #999;
             }
-
             .icon {
               position: absolute;
               right: 4pt;
@@ -663,26 +597,18 @@ initialize {
               min-width: 10rem;
               background-color: #fff;
             }
-            .select:focus {
-              border: 1px solid #111;
-              border-radius: 5px;
-            }
-
             .multiple {
               height: auto;
               min-height: calc(1.688 * 16pt);
               padding: 4pt calc(.875rem * 2)
                 4pt 8pt;
             }
-
             .select:hover {
               border-color: #000;
             }
-
             .select:hover .icon {
               color: #000;
             }
-
             .value {
               display: inline-flex;
               flex: 1;
@@ -695,7 +621,6 @@ initialize {
               color: #000;
               width: calc(100% - 1.25rem);
             }
-
             .value &gt; :global(div),
             .value &gt; :global(div:hover) {
               border-radius: 0;
@@ -704,11 +629,9 @@ initialize {
               margin: 0;
               color: inherit;
             }
-
             .placeholder {
               color: #999;
             }
-
             .icon {
               position: absolute;
               right: 4pt;
@@ -940,26 +863,18 @@ initialize {
               min-width: 10rem;
               background-color: #fff;
             }
-            .select:focus {
-              border: 1px solid #111;
-              border-radius: 5px;
-            }
-
             .multiple {
               height: auto;
               min-height: calc(1.688 * 16pt);
               padding: 4pt calc(.875rem * 2)
                 4pt 8pt;
             }
-
             .select:hover {
               border-color: #000;
             }
-
             .select:hover .icon {
               color: #000;
             }
-
             .value {
               display: inline-flex;
               flex: 1;
@@ -972,7 +887,6 @@ initialize {
               color: #000;
               width: calc(100% - 1.25rem);
             }
-
             .value &gt; :global(div),
             .value &gt; :global(div:hover) {
               border-radius: 0;
@@ -981,11 +895,9 @@ initialize {
               margin: 0;
               color: inherit;
             }
-
             .placeholder {
               color: #999;
             }
-
             .icon {
               position: absolute;
               right: 4pt;
@@ -1087,26 +999,18 @@ initialize {
               min-width: 10rem;
               background-color: #fff;
             }
-            .select:focus {
-              border: 1px solid #111;
-              border-radius: 5px;
-            }
-
             .multiple {
               height: auto;
               min-height: calc(1.688 * 16pt);
               padding: 4pt calc(.875rem * 2)
                 4pt 8pt;
             }
-
             .select:hover {
               border-color: #000;
             }
-
             .select:hover .icon {
               color: #000;
             }
-
             .value {
               display: inline-flex;
               flex: 1;
@@ -1119,7 +1023,6 @@ initialize {
               color: #000;
               width: calc(100% - 1.25rem);
             }
-
             .value &gt; :global(div),
             .value &gt; :global(div:hover) {
               border-radius: 0;
@@ -1128,11 +1031,9 @@ initialize {
               margin: 0;
               color: inherit;
             }
-
             .placeholder {
               color: #999;
             }
-
             .icon {
               position: absolute;
               right: 4pt;
@@ -1255,26 +1156,18 @@ initialize {
               min-width: 10rem;
               background-color: #fff;
             }
-            .select:focus {
-              border: 1px solid #111;
-              border-radius: 5px;
-            }
-
             .multiple {
               height: auto;
               min-height: calc(1.688 * 16pt);
               padding: 4pt calc(.875rem * 2)
                 4pt 8pt;
             }
-
             .select:hover {
               border-color: #000;
             }
-
             .select:hover .icon {
               color: #000;
             }
-
             .value {
               display: inline-flex;
               flex: 1;
@@ -1287,7 +1180,6 @@ initialize {
               color: #000;
               width: calc(100% - 1.25rem);
             }
-
             .value &gt; :global(div),
             .value &gt; :global(div:hover) {
               border-radius: 0;
@@ -1296,11 +1188,9 @@ initialize {
               margin: 0;
               color: inherit;
             }
-
             .placeholder {
               color: #999;
             }
-
             .icon {
               position: absolute;
               right: 4pt;
@@ -1462,7 +1352,7 @@ initialize {
 `;
 
 exports[`Select should work with different status 1`] = `
-"<div><div class=\\"select  \\"><span class=\\"value placeholder\\"><span><style>
+"<div><div class=\\"select  \\" tabindex=\\"0\\"><span class=\\"value placeholder\\"><span><style>
         span {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -1477,81 +1367,74 @@ exports[`Select should work with different status 1`] = `
           transition: all 200ms ease;
         }
       </style></svg></div><style>
-          .select {
-            display: inline-flex;
-            align-items: center;
-            user-select: none;
-            white-space: nowrap;
-            position: relative;
-            cursor: pointer;
-            max-width: 80vw;
-            width: initial;
-            overflow: hidden;
-            transition: border 0.2s ease 0s, color 0.2s ease-out 0s,
-              box-shadow 0.2s ease 0s;
-            border: 1px solid #eaeaea;
-            border-radius: 5px;
-            padding: 0 4pt 0 8pt;
-            height: calc(1.688 * 16pt);
-            min-width: 10rem;
-            background-color: #fff;
-          }
-
-          .multiple {
-            height: auto;
-            min-height: calc(1.688 * 16pt);
-            padding: 4pt calc(.875rem * 2)
-              4pt 8pt;
-          }
-
-          .select:hover {
-            border-color: #000;
-          }
-
-          .select:hover .icon {
-            color: #000;
-          }
-
-          .value {
-            display: inline-flex;
-            flex: 1;
-            height: 100%;
-            align-items: center;
-            line-height: 1;
-            padding: 0;
-            margin-right: 1.25rem;
-            font-size: .875rem;
-            color: #000;
-            width: calc(100% - 1.25rem);
-          }
-
-          .value > :global(div),
-          .value > :global(div:hover) {
-            border-radius: 0;
-            background-color: transparent;
-            padding: 0;
-            margin: 0;
-            color: inherit;
-          }
-
-          .placeholder {
-            color: #999;
-          }
-
-          .icon {
-            position: absolute;
-            right: 4pt;
-            font-size: .875rem;
-            top: 50%;
-            bottom: 0;
-            transform: translateY(-50%) rotate(0deg);
-            pointer-events: none;
-            transition: transform 200ms ease;
-            display: flex;
-            align-items: center;
-            color: #666;
-          }
-        </style></div><div class=\\"select  \\"><span class=\\"value placeholder\\"><span><style>
+            .select {
+              display: inline-flex;
+              align-items: center;
+              user-select: none;
+              white-space: nowrap;
+              position: relative;
+              cursor: pointer;
+              max-width: 80vw;
+              width: initial;
+              overflow: hidden;
+              transition: border 0.2s ease 0s, color 0.2s ease-out 0s,
+                box-shadow 0.2s ease 0s;
+              border: 1px solid #eaeaea;
+              border-radius: 5px;
+              padding: 0 4pt 0 8pt;
+              height: calc(1.688 * 16pt);
+              min-width: 10rem;
+              background-color: #fff;
+            }
+            .multiple {
+              height: auto;
+              min-height: calc(1.688 * 16pt);
+              padding: 4pt calc(.875rem * 2)
+                4pt 8pt;
+            }
+            .select:hover {
+              border-color: #000;
+            }
+            .select:hover .icon {
+              color: #000;
+            }
+            .value {
+              display: inline-flex;
+              flex: 1;
+              height: 100%;
+              align-items: center;
+              line-height: 1;
+              padding: 0;
+              margin-right: 1.25rem;
+              font-size: .875rem;
+              color: #000;
+              width: calc(100% - 1.25rem);
+            }
+            .value > :global(div),
+            .value > :global(div:hover) {
+              border-radius: 0;
+              background-color: transparent;
+              padding: 0;
+              margin: 0;
+              color: inherit;
+            }
+            .placeholder {
+              color: #999;
+            }
+            .icon {
+              position: absolute;
+              right: 4pt;
+              font-size: .875rem;
+              top: 50%;
+              bottom: 0;
+              transform: translateY(-50%) rotate(0deg);
+              pointer-events: none;
+              transition: transform 200ms ease;
+              display: flex;
+              align-items: center;
+              color: #666;
+            }
+          </style></div><div class=\\"select  \\" tabindex=\\"0\\"><span class=\\"value placeholder\\"><span><style>
         span {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -1566,81 +1449,74 @@ exports[`Select should work with different status 1`] = `
           transition: all 200ms ease;
         }
       </style></svg></div><style>
-          .select {
-            display: inline-flex;
-            align-items: center;
-            user-select: none;
-            white-space: nowrap;
-            position: relative;
-            cursor: pointer;
-            max-width: 80vw;
-            width: initial;
-            overflow: hidden;
-            transition: border 0.2s ease 0s, color 0.2s ease-out 0s,
-              box-shadow 0.2s ease 0s;
-            border: 1px solid #0070f3;
-            border-radius: 5px;
-            padding: 0 4pt 0 8pt;
-            height: calc(1.688 * 16pt);
-            min-width: 10rem;
-            background-color: #fff;
-          }
-
-          .multiple {
-            height: auto;
-            min-height: calc(1.688 * 16pt);
-            padding: 4pt calc(.875rem * 2)
-              4pt 8pt;
-          }
-
-          .select:hover {
-            border-color: #000;
-          }
-
-          .select:hover .icon {
-            color: #000;
-          }
-
-          .value {
-            display: inline-flex;
-            flex: 1;
-            height: 100%;
-            align-items: center;
-            line-height: 1;
-            padding: 0;
-            margin-right: 1.25rem;
-            font-size: .875rem;
-            color: #000;
-            width: calc(100% - 1.25rem);
-          }
-
-          .value > :global(div),
-          .value > :global(div:hover) {
-            border-radius: 0;
-            background-color: transparent;
-            padding: 0;
-            margin: 0;
-            color: inherit;
-          }
-
-          .placeholder {
-            color: #999;
-          }
-
-          .icon {
-            position: absolute;
-            right: 4pt;
-            font-size: .875rem;
-            top: 50%;
-            bottom: 0;
-            transform: translateY(-50%) rotate(0deg);
-            pointer-events: none;
-            transition: transform 200ms ease;
-            display: flex;
-            align-items: center;
-            color: #666;
-          }
-        </style></div><div class=\\"select  \\"><span class=\\"value placeholder\\"><span><style>
+            .select {
+              display: inline-flex;
+              align-items: center;
+              user-select: none;
+              white-space: nowrap;
+              position: relative;
+              cursor: pointer;
+              max-width: 80vw;
+              width: initial;
+              overflow: hidden;
+              transition: border 0.2s ease 0s, color 0.2s ease-out 0s,
+                box-shadow 0.2s ease 0s;
+              border: 1px solid #0070f3;
+              border-radius: 5px;
+              padding: 0 4pt 0 8pt;
+              height: calc(1.688 * 16pt);
+              min-width: 10rem;
+              background-color: #fff;
+            }
+            .multiple {
+              height: auto;
+              min-height: calc(1.688 * 16pt);
+              padding: 4pt calc(.875rem * 2)
+                4pt 8pt;
+            }
+            .select:hover {
+              border-color: #000;
+            }
+            .select:hover .icon {
+              color: #000;
+            }
+            .value {
+              display: inline-flex;
+              flex: 1;
+              height: 100%;
+              align-items: center;
+              line-height: 1;
+              padding: 0;
+              margin-right: 1.25rem;
+              font-size: .875rem;
+              color: #000;
+              width: calc(100% - 1.25rem);
+            }
+            .value > :global(div),
+            .value > :global(div:hover) {
+              border-radius: 0;
+              background-color: transparent;
+              padding: 0;
+              margin: 0;
+              color: inherit;
+            }
+            .placeholder {
+              color: #999;
+            }
+            .icon {
+              position: absolute;
+              right: 4pt;
+              font-size: .875rem;
+              top: 50%;
+              bottom: 0;
+              transform: translateY(-50%) rotate(0deg);
+              pointer-events: none;
+              transition: transform 200ms ease;
+              display: flex;
+              align-items: center;
+              color: #666;
+            }
+          </style></div><div class=\\"select  \\" tabindex=\\"0\\"><span class=\\"value placeholder\\"><span><style>
         span {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -1655,81 +1531,74 @@ exports[`Select should work with different status 1`] = `
           transition: all 200ms ease;
         }
       </style></svg></div><style>
-          .select {
-            display: inline-flex;
-            align-items: center;
-            user-select: none;
-            white-space: nowrap;
-            position: relative;
-            cursor: pointer;
-            max-width: 80vw;
-            width: initial;
-            overflow: hidden;
-            transition: border 0.2s ease 0s, color 0.2s ease-out 0s,
-              box-shadow 0.2s ease 0s;
-            border: 1px solid #f5a623;
-            border-radius: 5px;
-            padding: 0 4pt 0 8pt;
-            height: calc(1.688 * 16pt);
-            min-width: 10rem;
-            background-color: #fff;
-          }
-
-          .multiple {
-            height: auto;
-            min-height: calc(1.688 * 16pt);
-            padding: 4pt calc(.875rem * 2)
-              4pt 8pt;
-          }
-
-          .select:hover {
-            border-color: #000;
-          }
-
-          .select:hover .icon {
-            color: #000;
-          }
-
-          .value {
-            display: inline-flex;
-            flex: 1;
-            height: 100%;
-            align-items: center;
-            line-height: 1;
-            padding: 0;
-            margin-right: 1.25rem;
-            font-size: .875rem;
-            color: #000;
-            width: calc(100% - 1.25rem);
-          }
-
-          .value > :global(div),
-          .value > :global(div:hover) {
-            border-radius: 0;
-            background-color: transparent;
-            padding: 0;
-            margin: 0;
-            color: inherit;
-          }
-
-          .placeholder {
-            color: #999;
-          }
-
-          .icon {
-            position: absolute;
-            right: 4pt;
-            font-size: .875rem;
-            top: 50%;
-            bottom: 0;
-            transform: translateY(-50%) rotate(0deg);
-            pointer-events: none;
-            transition: transform 200ms ease;
-            display: flex;
-            align-items: center;
-            color: #666;
-          }
-        </style></div><div class=\\"select  \\"><span class=\\"value placeholder\\"><span><style>
+            .select {
+              display: inline-flex;
+              align-items: center;
+              user-select: none;
+              white-space: nowrap;
+              position: relative;
+              cursor: pointer;
+              max-width: 80vw;
+              width: initial;
+              overflow: hidden;
+              transition: border 0.2s ease 0s, color 0.2s ease-out 0s,
+                box-shadow 0.2s ease 0s;
+              border: 1px solid #f5a623;
+              border-radius: 5px;
+              padding: 0 4pt 0 8pt;
+              height: calc(1.688 * 16pt);
+              min-width: 10rem;
+              background-color: #fff;
+            }
+            .multiple {
+              height: auto;
+              min-height: calc(1.688 * 16pt);
+              padding: 4pt calc(.875rem * 2)
+                4pt 8pt;
+            }
+            .select:hover {
+              border-color: #000;
+            }
+            .select:hover .icon {
+              color: #000;
+            }
+            .value {
+              display: inline-flex;
+              flex: 1;
+              height: 100%;
+              align-items: center;
+              line-height: 1;
+              padding: 0;
+              margin-right: 1.25rem;
+              font-size: .875rem;
+              color: #000;
+              width: calc(100% - 1.25rem);
+            }
+            .value > :global(div),
+            .value > :global(div:hover) {
+              border-radius: 0;
+              background-color: transparent;
+              padding: 0;
+              margin: 0;
+              color: inherit;
+            }
+            .placeholder {
+              color: #999;
+            }
+            .icon {
+              position: absolute;
+              right: 4pt;
+              font-size: .875rem;
+              top: 50%;
+              bottom: 0;
+              transform: translateY(-50%) rotate(0deg);
+              pointer-events: none;
+              transition: transform 200ms ease;
+              display: flex;
+              align-items: center;
+              color: #666;
+            }
+          </style></div><div class=\\"select  \\" tabindex=\\"0\\"><span class=\\"value placeholder\\"><span><style>
         span {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -1744,79 +1613,72 @@ exports[`Select should work with different status 1`] = `
           transition: all 200ms ease;
         }
       </style></svg></div><style>
-          .select {
-            display: inline-flex;
-            align-items: center;
-            user-select: none;
-            white-space: nowrap;
-            position: relative;
-            cursor: pointer;
-            max-width: 80vw;
-            width: initial;
-            overflow: hidden;
-            transition: border 0.2s ease 0s, color 0.2s ease-out 0s,
-              box-shadow 0.2s ease 0s;
-            border: 1px solid #e00;
-            border-radius: 5px;
-            padding: 0 4pt 0 8pt;
-            height: calc(1.688 * 16pt);
-            min-width: 10rem;
-            background-color: #fff;
-          }
-
-          .multiple {
-            height: auto;
-            min-height: calc(1.688 * 16pt);
-            padding: 4pt calc(.875rem * 2)
-              4pt 8pt;
-          }
-
-          .select:hover {
-            border-color: #000;
-          }
-
-          .select:hover .icon {
-            color: #000;
-          }
-
-          .value {
-            display: inline-flex;
-            flex: 1;
-            height: 100%;
-            align-items: center;
-            line-height: 1;
-            padding: 0;
-            margin-right: 1.25rem;
-            font-size: .875rem;
-            color: #000;
-            width: calc(100% - 1.25rem);
-          }
-
-          .value > :global(div),
-          .value > :global(div:hover) {
-            border-radius: 0;
-            background-color: transparent;
-            padding: 0;
-            margin: 0;
-            color: inherit;
-          }
-
-          .placeholder {
-            color: #e00;
-          }
-
-          .icon {
-            position: absolute;
-            right: 4pt;
-            font-size: .875rem;
-            top: 50%;
-            bottom: 0;
-            transform: translateY(-50%) rotate(0deg);
-            pointer-events: none;
-            transition: transform 200ms ease;
-            display: flex;
-            align-items: center;
-            color: #666;
-          }
-        </style></div></div>"
+            .select {
+              display: inline-flex;
+              align-items: center;
+              user-select: none;
+              white-space: nowrap;
+              position: relative;
+              cursor: pointer;
+              max-width: 80vw;
+              width: initial;
+              overflow: hidden;
+              transition: border 0.2s ease 0s, color 0.2s ease-out 0s,
+                box-shadow 0.2s ease 0s;
+              border: 1px solid #e00;
+              border-radius: 5px;
+              padding: 0 4pt 0 8pt;
+              height: calc(1.688 * 16pt);
+              min-width: 10rem;
+              background-color: #fff;
+            }
+            .multiple {
+              height: auto;
+              min-height: calc(1.688 * 16pt);
+              padding: 4pt calc(.875rem * 2)
+                4pt 8pt;
+            }
+            .select:hover {
+              border-color: #000;
+            }
+            .select:hover .icon {
+              color: #000;
+            }
+            .value {
+              display: inline-flex;
+              flex: 1;
+              height: 100%;
+              align-items: center;
+              line-height: 1;
+              padding: 0;
+              margin-right: 1.25rem;
+              font-size: .875rem;
+              color: #000;
+              width: calc(100% - 1.25rem);
+            }
+            .value > :global(div),
+            .value > :global(div:hover) {
+              border-radius: 0;
+              background-color: transparent;
+              padding: 0;
+              margin: 0;
+              color: inherit;
+            }
+            .placeholder {
+              color: #e00;
+            }
+            .icon {
+              position: absolute;
+              right: 4pt;
+              font-size: .875rem;
+              top: 50%;
+              bottom: 0;
+              transform: translateY(-50%) rotate(0deg);
+              pointer-events: none;
+              transition: transform 200ms ease;
+              display: flex;
+              align-items: center;
+              color: #666;
+            }
+          </style></div></div>"
 `;
