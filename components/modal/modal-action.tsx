@@ -10,22 +10,24 @@ import css from 'styled-jsx/css'
 import useTheme from '../use-theme'
 import { useModalContext } from './modal-context'
 import Button, { ButtonProps } from '../button/button'
+import { getColors } from './styles'
+import { NormalTypes } from 'components/utils/prop-types'
 
 type ModalActionEvent = MouseEvent<HTMLButtonElement> & {
   close: () => void
 }
 
 interface Props {
+  type?: NormalTypes
   className?: string
-  passive?: boolean
   disabled?: boolean
   onClick?: (event: ModalActionEvent) => void
 }
 
 const defaultProps = {
   className: '',
-  passive: false,
   disabled: false,
+  type: 'default' as NormalTypes,
 }
 
 export type ModalActionProps = Props &
@@ -37,7 +39,7 @@ const ModalAction = React.forwardRef<
   React.PropsWithChildren<ModalActionProps>
 >(
   (
-    { className, children, onClick, passive, disabled, ...props },
+    { type, className, children, onClick, disabled, ...props },
     ref: React.Ref<HTMLButtonElement | null>,
   ) => {
     const theme = useTheme()
@@ -53,20 +55,17 @@ const ModalAction = React.forwardRef<
       onClick && onClick(actionEvent)
     }
 
-    const color = useMemo(() => {
-      return passive ? theme.palette.accents_5 : theme.palette.foreground
-    }, [theme.palette, passive, disabled])
-
-    const bgColor = useMemo(() => {
-      return disabled ? theme.palette.accents_1 : theme.palette.background
-    }, [theme.palette, disabled])
+    const { color, background } = useMemo(() => getColors(theme.palette, type), [
+      theme.palette,
+      type,
+    ])
 
     const { className: resolveClassName, styles } = css.resolve`
       button.btn {
         font-size: 0.75rem;
         border: none;
-        color: ${color};
-        background-color: ${theme.palette.background};
+        color: ${disabled ? theme.palette.foreground : color};
+        background-color: ${disabled ? theme.palette.accents_1 : background};
         display: flex;
         -webkit-box-align: center;
         align-items: center;
@@ -79,8 +78,8 @@ const ModalAction = React.forwardRef<
       }
       button.btn:hover,
       button.btn:focus {
-        color: ${disabled ? color : theme.palette.foreground};
-        background-color: ${disabled ? bgColor : theme.palette.accents_1};
+        color: ${disabled && theme.palette.foreground};
+        background-color: ${disabled && theme.palette.accents_1};
       }
     `
 
